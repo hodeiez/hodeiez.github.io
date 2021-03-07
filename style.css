@@ -133,7 +133,8 @@ section {
   border-radius: 10px;
   background: rgb(56, 56, 56);
   box-shadow: 2px 3px 40px rgba(0, 0, 0, 0.4);
-  text-align: justify;
+  text-align: center;
+  margin:2%;
 
 }
 section h3 {
@@ -148,11 +149,13 @@ section p {
 }
 .mapFrame{
 
-margin-bottom:5%;
+margin:5%;
 padding-top: 5%;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
   background-color:rgb(36, 36, 36);
   text-align: center;
+  border-radius: 2%;
+
 }
 .mapFrame iframe{
   width: 90%;
