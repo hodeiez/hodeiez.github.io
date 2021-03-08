@@ -180,6 +180,12 @@ color:white;
   padding-bottom:25%;
   background-color: white;
   }
+ .responsiveImg{
+   width: 80%;
+ }
+ section{
+   margin-top: 40%;;
+ }
 
 
 }
