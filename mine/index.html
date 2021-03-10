@@ -5,8 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hodei</title>
-</head>
-<body>
-    <p>still in progress</p>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand">HODEI</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about-me">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<section>
+    <div id="about-me" class="row mt-5 justify-content-center">
+        <div class="col ml-5 justify-content-center">
+    <img class="img-fluid" src="../images/niMres.png">
+</div>
+        <div class="col">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="carousel-content">
+                          <h3 class="text-center">I am Hodei.</h3>
+                      </div>
+                   <!--<img src="../images/me.png" class="d-block w-100" alt="...">--> 
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h3>Father of two lovely child.</h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h3>Psychologist,
+                            social worker, social project coordinator, stagehand and many other
+                            roles acquired in my career.</h3>
+                    </div>
+                  </div>¨
+                  <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h3>Music and visual creation lover
+                            and curious about electronical creations.</h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h3>Born and raised in
+                            the Basque Country and settled in Sweden since 2017.</h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h3>At the
+                            moment I'm taking professional training in <strong>Java</strong> at
+                            Nackademin (Stockholm).</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+</div>
+</section>
+
+
+<script>
+var myCarousel = document.querySelector('#myCarousel')
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 3000,
+    })
+    </script>
 </body>
 </html>
