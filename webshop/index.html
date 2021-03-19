@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUR SHOP</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/united/bootstrap.min.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in</a>
+          </li>
+          
+        </ul>
+      </div>
+      <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    > 
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     
+      <div class="navbar-text navbar-expand-lg d-inline-flex">
+
+          
+        <span id="sidebar-toggle" class="btn btn-light">
+          <img
+          src="images/shoppingCart.svg"
+          alt="shopping-cart icon"
+          width="20"
+          height="20"
+          class="ml-auto"
+        />
+      </span>
+      <div id="shopping-cart-icon" class=""> 0 </div>
+    </div>
+    </nav>
+
+
+          <!-- side bar-->
+          <div id="wrapper" class="">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="shadow">
+              
+              <h3 class="bg-light sticky-top">SHOPPING CART</h3>
+            
+              <div id="shopping-cart" class="container overflow-auto">
+
+          <template id="product-item">
+              <div id="product-id" class="row bg-light rounded m-1 shadow">
+                <div class="col-2 m-auto">
+                  <img
+                  id="product-item-image"
+                  src="http://pngimg.com/uploads/jacket/jacket_PNG8058.png"
+                  class="card-img rounded d-block img-thumbnail"
+                  alt="product image"
+                  style="
+                    max-width: 50px;
+                    max-height: 50px;
+                    height: 100%;
+                    width: 100%;
+                  "
+                />
+                </div>
+                <div id="product-item-title" class="col-4">
+                  <p>MENS JACK</p>
+                </div>
+                
+                <div class="col m-auto pr-0 pl-2">
+                  <button id="quantity-plus" class="quantity-plus btn btn-success rounded-circle page-link " value="1" >+</button>
+                  
+                </div>
+                <div id="product-item-quantity" class="col-1 m-auto pr-1 pl-1">1
+                  
+                </div>
+                <div class="col m-auto pr-0 pl-0">
+               
+                      <button id="quantity-minus" class="quantity-minus btn btn-danger rounded-circle page-link" value="-1" >-</button>
+                </div>
+                <div class="col-2 m-auto">
+                  <span id="product-item-remove" class="btn bg-transparent remove-product-item" data-product-id="">
+                    <img
+                    src="images/iconmonstr-trash-can-1.svg"
+                    alt="shopping-cart icon"
+                    width="20"
+                    height="20"
+                    class="ml-auto"
+                  />
+                </span>
+                </div>
+              </div>
+              </template>
+       
+            </div>
+            <div class="container sticky-bottom">
+              <div class="row bg-white">
+                <div class="col ">TOTAL PRICE</div>
+                <div id="shopping-cart-total-price" class="col "></div>
+              </div>
+              <div class="row bg-white">
+            <button id="check-out-button" class=" btn btn-secondary btn-block sticky-bottom mt-auto mb-0 ">checkout</button>
+          </div>     
+          </div>
+             
+            
+         
+              
+        
+            </div> <!-- /#sidebar-wrapper -->
+            <!-- Page Content -->
+    <div id="page-content-wrapper">
+              <div class="container d-flex pl-0 pr-0">
+                <ul
+                  id="categories"
+                  class="list-group list-group-horizontal m-auto"
+                ></ul>
+              </div>
+                <!-- /#page-content-wrapper -->
+    <div class="container">
+    
+  
+      <div id="products" class="row justify-content-center">
+        
+    </div>
+        <template id="myTemplate">
+          <div class="shadow-sm card mb-3 mr-3" style="max-width: 540px">
+            <div class="row no-gutters" style="height: 100%">
+              <div class="col-md-4">
+                <img
+                  id="image-node"
+                  src="http://pngimg.com/uploads/jacket/jacket_PNG8058.png"
+                  class="card-img rounded d-block"
+                  alt="product image"
+                  style="
+                    max-width: 250px;
+                    max-height: 250px;
+                    height: 100%;
+                    width: 100%;
+                  "
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 id="title-node" class="card-title">Card title</h5>
+                  <p
+                    id="description-node"
+                    aria-expanded="false"
+                    class="card-text"
+                  >
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">available</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row align-bottom">
+              <div class="col-4 pr-0">
+                <button
+                  id="buy-node"
+                  value="default-value"
+                  onClick="addToCart(this);"
+                  class="mb-0 btn btn-success col" 
+                  data-title="this is title" 
+                  data-description="this is description" 
+                  data-toggle="modal" 
+                  data-target="#added-modal"
+                  type="button"
+                >
+                  buy
+                </button>
+              </div>
+              <div class="col pr-0">
+                Price:
+              </div>
+              <div id="price-node" class="col pl-0">
+                <h4>'+price+'</h4>
+              </div>
+              
+              <div class="col-4">
+                <button id="modal-button" type="button" onClick="" class="mb-0 btn btn-light col" data-title="this is title" data-image="" data-description="this is description" data-toggle="modal" data-target="#info-modal">
+                  more info
+                </button>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <!-- modal-->
+        <div
+          class="modal fade"
+          id="info-modal"
+          tabindex="-1"
+          role="dialog"
+          
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-with-image">
+                  Modal title
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <img class="modal-image img-responsive img-thumbnail" src="#" alt="product-image"/>
+                </div>
+              <div class="col modal-body">...</div>
+            </div>
+              <div class="modal-footer">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end modal-->
+        <div
+        class="modal fade"
+        id="added-modal"
+        tabindex="-1"
+        role="dialog"
+        
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="text-modal">
+                Modal title
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+        <!--end sidebar-->
+      </div>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+    crossorigin="anonymous"></script>
+
+
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+<script src="init.js"></script>
+    <script src="test.js"></script>
+    <script>
+      //test sidebar
+      $(function(){
+            $("#sidebar-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+          });
+          
+      //end, then the rest
+      shoppingCartInit();
+      setCategories();
+      setAllProducts();
+      //productItemFunctionality();
+      
+        
+  
+     
+    </script>
+  </body>
+</html>

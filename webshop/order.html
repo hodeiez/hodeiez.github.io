@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm order</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="index.html">go back</a>
+    </nav>
+    <div class="container">
+      <h1>Confirm Order</h1>
+      <h4>
+        Please check your order and fill the form to receive it as soon as
+        possible! :)
+      </h4>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Product title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Sum</th>
+          </tr>
+        </thead>
+        <tbody id="order-table-body">
+          <template id="product-row">
+            <tr>
+              <th id="product-title-table" scope="row">
+                kofdskapofsdkpofdasko
+              </th>
+              <td id="product-price-table">234,3</td>
+              <td id="product-quantity-table">2</td>
+              <td id="product-sum-table">468</td>
+            </tr>
+          </template>
+          <tr>
+            <th colspan="2"></th>
+            <td><i>Taxes</i></td>
+            <td id="taxes-number">9093240</td>
+          </tr>
+          <tr>
+            <th colspan="2"></th>
+            <td><i>Delivery Costs:</i></td>
+            <td id="costs-number">9093240</td>
+          </tr>
+          <tr>
+            <th colspan="2"></th>
+            <td><strong>To pay:</strong></td>
+            <td id="total-price">9093240</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row mt-5">
+        <div class="col">
+          <h2>Write your delivery data</h2>
+        </div>
+      </div>
+      <form id="confirmation-form">
+        <div class="row">
+          <div class="col">
+            <label for="name-form">Name</label>
+            <input
+              id="name-form"
+              type="text"
+              class="form-control"
+              title="write your name"
+              placeholder="Your name"
+            />
+          </div>
+          <div class="col">
+            <label for="surname-form">Surname</label>
+            <input
+              id="surname-form"
+              type="text"
+              class="form-control"
+              placeholder="Your surname"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="email-form">E-mail</label>
+            <input
+              id="email-form"
+              type="email"
+              class="form-control"
+              placeholder="my@email.com"
+            />
+          </div>
+          <div class="col">
+            <label for="phone-form">Telephone number</label>
+            <input
+              id="phone-form"
+              type="text"
+              class="form-control"
+              placeholder="79695843"
+            />
+          </div>
+        </div>
+
+        <label for="address-form">Address</label>
+        <input
+          id="address-form"
+          type="text"
+          class="form-control"
+          placeholder="Your address"
+        />
+        <div class="row">
+          <div class="col">
+            <label for="city-form">City</label>
+            <input
+              id="city-form"
+              type="text"
+              class="form-control"
+              placeholder="Your city"
+            />
+          </div>
+          <div class="col">
+            <label for="zip-form">Zip</label>
+            <input
+              id="zip-form"
+              type="text"
+              class="form-control"
+              placeholder="120 59"
+            />
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+            <button id="submit" class="btn btn-primary" type="button">
+              Confirm and Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      <div
+        id="dialog"
+        title="Confirmed"
+        class="modal-dialog-centered bg-light shadow" hidden
+      >
+        <h3>Your order has been confirmed</h3>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="init.js"></script>
+    <script src="test.js"></script>
+
+    <script>
+      orderInit();
+
+      let $nameField = $("#name-form"),
+        $surnameField = $("#surname-form"),
+        $emailField = $("#email-form"),
+        $phoneField = $("#phone-form"),
+        $addressField = $("#address-form"),
+        $cityFIeld = $("#city-form"),
+        $zipField = $("#zip-form"),
+        $submit = $("#submit");
+
+      addinvalidDiv();
+
+      function addinvalidDiv() {
+        $("input", $("form")).each(function () {
+          if (
+            $(this).attr("id") === "phone-form" ||
+            $(this).attr("id") === "zip-form"
+          ){$(this).addClass('numeric')
+            $(this).after(
+              '<div class="invalid-number-feedback invalid-feedback">You didnt type a correct number</div>'
+            );
+            
+          }
+          else{
+            $(this).after(
+              '<div class="invalid-empty invalid-feedback">This is empty</div>'
+            );
+            $(this).addClass('text')}
+        });
+      }
+
+      $("#submit").click(function (e) {
+        //is blank
+        $("input", $("form")).each(function () {
+
+        if ($(this).hasClass('.text') && $(this).val()===""){
+          showNotValid($(this));
+          $(this).children($(".invalid-feedback")).show();
+          console.log("here1")
+          $(".invalid-number-feedback").show();
+          
+          return false;
+        
+        }
+       else if (!$.isNumeric($(this).val()) || !$.isNumeric($zipField.val()) ) {
+          // e.preventDefault()
+          console.log('first '+ $(this))
+          showNotValid($(this).val());
+         
+          // $('#phone-form').addClass('.is-valid')
+          $(".invalid-number-feedback").show();
+          console.log("here2")
+          return false;
+        } else {
+          $("#dialog").dialog("open");
+          $submit.attr("disabled", true);
+         
+        }
+        //return false;
+      })
+    });
+
+      $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        show: "blind",
+        hide: "fold",
+        resizable: false,
+        height: 200,
+        width: 400,
+      });
+
+      function showNotValid(element) {
+        $(element).effect("shake");
+        // $(this).tooltip()
+        $(element)
+          .animate({
+            borderColor: "red",
+          })
+          .delay(1000);
+        $(element).animate({
+          borderColor: "gray",
+        });
+      }
+    </script>
+  </body>
+</html>
