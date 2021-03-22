@@ -48,6 +48,7 @@
       margin-left: calc((var(--carousel-tile-width) * (var(--carousel-growth-factor) - 1)) / 2);
       margin-right: calc((var(--carousel-tile-width) * (var(--carousel-growth-factor) - 1)) / 2);
       transition: var(--carousel-transition-2);
+      
 }
 
 /* Content Tile */
@@ -97,3 +98,13 @@
       -webkit-transform: translate3d(var(--carousel-offset-right), 0, 0);
       transform: translate3d(var(--carousel-offset-right), 0, 0);
 }
+
+@media screen and (max-width: 768px) {
+
+     .carousel-tile{
+           display: block;
+           margin-bottom: 5em;
+         
+     }
+      
+      }
