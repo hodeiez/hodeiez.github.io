@@ -99,7 +99,7 @@
       transform: translate3d(var(--carousel-offset-right), 0, 0);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
      .carousel-tile{
            display: block;
