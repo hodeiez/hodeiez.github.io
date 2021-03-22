@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+.responsiveImg {
+  height: auto;
+  width: 50%;
+  padding: 10px;
+  margin: auto;
+  display: block;
+  
+}
+h1 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+.column{
+ float: left;
+  width:33%;
+  text-align: center;
+ 
+}
+.column a{
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  width:100%;
+color:black;
+}
+.row{
+  margin-bottom: 20%;
+  }
+
+.row::after{
+
+  display: table;
+  clear: both;
+}
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Noto Sans";
+  font-size: 130%;
+  margin:auto;
+}
+.myFormattedList li {
+  background-color: rgb(59, 59, 59);
+  list-style-type: none;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  
+}
+.myFormattedList li a {
+font-style: normal;
+text-decoration: none;
+color:white;
+  
+}
+.myFormattedList {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+
+  font-style: normal;
+  padding-bottom:10%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.myFormattedList img{
+  width: 80%;
+  margin-bottom:5%;
+  border-radius: 2%;
+}
+.myFormattedList p{
+  font-size:75%;
+}
+.myFormattedList h1{
+  background-color: gray;
+}
+.myFormattedList a{
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+nav a.active {
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  text-shadow: 2px 3px 2px rgb(13, 13, 14);
+  border-radius: 2px;
+}
+
+nav a:hover {
+  background-color: rgb(68, 66, 70);
+ 
+}
+nav a {
+  background-color: rgb(114, 114, 98);
+  color: white;
+  width: max-content;
+  font-style: normal;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 120%;
+  width: 30%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+nav {
+  text-align: center;
+  background-color:  rgb(114, 114, 98);
+  width: 100%;
+  overflow: auto;
+  margin: auto;
+
+  top:0;
+  position:fixed;
+}
+footer {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(114, 114, 98);
+  color: white;
+}
+footer p{
+ font-size: 100%;
+}
+footer a:hover{
+ color:rgb(75, 74, 75);
+}
+section {
+  border-radius: 10px;
+  background: rgb(56, 56, 56);
+  box-shadow: 2px 3px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin:2%;
+
+}
+section h3 {
+  text-align: center;
+  background-color: rgb(41, 39, 43);
+  color: white;
+}
+section p {
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 160%;
+}
+.mapFrame{
+
+margin:5%;
+padding-top: 5%;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  background-color:rgb(36, 36, 36);
+  text-align: center;
+  border-radius: 2%;
+
+}
+.mapFrame iframe{
+  width: 90%;
+}
+
+
+p{
+color:white;
+}
+.icons{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: rgb(0, 0, 0);
+  mask-size: cover;
+ 
+}
+.icons-sm-w{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  mask-size: cover;
+ 
+}
+.linkedinIcon{
+  mask:url(../images/linkedin.svg);
+  -webkit-mask:url(images/linkedin.svg);
+}
+.githubIcon{
+  mask:url(../images/github.svg);
+  -webkit-mask:url(images/github.svg);
+}
+.youtubeIcon{
+  mask:url(../images/youtube.svg);
+  mask-repeat: no-repeat; 
+  -webkit-mask:url(images/youtube.svg);
+  -webkit-mask-repeat: no-repeat;
+}
+.youtubeIcon-sm{
+  mask:url(../images/youtube-sm.svg);
+  mask-repeat: no-repeat; 
+}
+@media only screen and (max-width: 768px){
+  nav a {
+    font-size:100%;
+  }
+  .mapFrame{
+    margin-top:10%;
+    margin-bottom: 10%;
+  }
+  footer {
+    font-size:90%;
+  }
+  .row {
+  padding-bottom:25%;
+  background-color: white;
+  }
+ .responsiveImg{
+   width: 80%;
+ }
+ section{
+   margin-top: 40%;;
+ }
+
+
+}
