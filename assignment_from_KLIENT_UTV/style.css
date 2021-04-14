@@ -183,16 +183,16 @@ color:white;
 }
 .linkedinIcon{
   mask:url(../images/linkedin.svg);
-  -webkit-mask:url(images/linkedin.svg);
+  -webkit-mask:url(../images/linkedin.svg);
 }
 .githubIcon{
   mask:url(../images/github.svg);
-  -webkit-mask:url(images/github.svg);
+  -webkit-mask:url(../images/github.svg);
 }
 .youtubeIcon{
   mask:url(../images/youtube.svg);
   mask-repeat: no-repeat; 
-  -webkit-mask:url(images/youtube.svg);
+  -webkit-mask:url(../images/youtube.svg);
   -webkit-mask-repeat: no-repeat;
 }
 .youtubeIcon-sm{
