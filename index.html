@@ -6,25 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hodei</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="carousel.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+    
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css"
     />
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="carousel.css" />
+ 
  
   </head>
   <body>
@@ -64,7 +54,7 @@
 </div>
         <div class="col-sm ">
             <div id="myCarousel" class="carousel slide d-flex h-100 align-items-center justify-content-center " data-bs-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner ">
                   <div class="carousel-item active">
                       <div class="carousel-content">
                           <h3 class="text-center">I am Hodei.</h3>
@@ -211,12 +201,22 @@
 
 </section>
 
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+   <!-- Popper JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
+
 var myCarousel = document.querySelector('#myCarousel')
     var carousel = new bootstrap.Carousel(myCarousel, {
-      interval: 3000,
+      interval: 3000
+      
     })
+   
     </script>
 </body>
 </html>

@@ -96,8 +96,8 @@
 
 /* Content Tile on Hover */
 .carousel-tile:hover ~ .carousel-tile {
-      -webkit-transform: translate3d(var(--carousel-offset-right), 0, 0);
-      transform: translate3d(var(--carousel-offset-right), 0, 0);
+      -webkit-transform: translate3d(var(--carousel-offset-right), 00, 0) ;
+      transform: translate3d(var(--carousel-offset-right), 0, 0) ;
 }
 
 @media screen and (max-width: 600px) {
@@ -117,3 +117,4 @@
   
       
       }
+     
